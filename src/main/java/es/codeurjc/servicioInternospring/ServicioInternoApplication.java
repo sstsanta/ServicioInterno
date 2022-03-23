@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ServicioInternoApplication implements CommandLineRunner{
 	
 	private static final String MESSAGE = "Hello world!";
+	
 	@Autowired
     RabbitTemplate rabbitTemplate;
 

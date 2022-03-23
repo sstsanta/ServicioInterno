@@ -12,6 +12,7 @@
 	<artifactId>servicioInterno-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>servicioInterno</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 		<url>https://github.com/gortazar/simple-commandline-rabbitmq</url>
 	<properties>
@@ -26,31 +27,10 @@
 		</license>
 	</licenses>
 	
-	<scm>
-		<url>https://github.com/gortazar/simple-commandline-rabbitmq</url>
-	</scm>
-	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-		
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.amqp</groupId>
-			<artifactId>spring-rabbit-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
