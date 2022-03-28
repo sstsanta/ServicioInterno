@@ -1,5 +1,6 @@
 package es.codeurjc.servicioInternospring;
 
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.HashMap;
 
@@ -10,8 +11,9 @@ public class Receiver {
     public void receiveMessage(HashMap<String,String> message) {
         System.out.println("[Receiver] ha recibido el mensaje \"" + message.get("Usuario") + '"');
         try {
-        	String nombre = "/factura"+i+".txt";
-            PrintWriter writer = new PrintWriter(nombre, "UTF-8");
+        	String nombre = "/Users/sergiosanta/Desktop/factura"+i+".txt";
+        	FileWriter fichero = new FileWriter(nombre);
+            PrintWriter writer = new PrintWriter(fichero);
             writer.println("Factura a nombre de : " + message.get("Usuario"));
             writer.println("-------------------------------------------------");
             writer.println("Precio : " + message.get("Precio"));
@@ -22,6 +24,7 @@ public class Receiver {
             writer.println("-------------------------------------------------");
             writer.println("Muchas Gracias Por Su Pedido");
             writer.close();
+            i++;
         } catch (Exception e) {
             e.printStackTrace();
         }
