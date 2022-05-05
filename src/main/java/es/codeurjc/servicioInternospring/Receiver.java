@@ -11,7 +11,7 @@ public class Receiver {
     public void receiveMessage(HashMap<String,String> message) {
         System.out.println("[Receiver] ha recibido el mensaje \"" + message.get("Usuario") + '"');
         try {
-        	String nombre = "/Users/sergiosanta/Desktop/factura"+i+".txt";
+        	String nombre = "/root/factura"+i+".txt";
         	FileWriter fichero = new FileWriter(nombre);
             PrintWriter writer = new PrintWriter(fichero);
             writer.println("Factura a nombre de : " + message.get("Usuario"));
